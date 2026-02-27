@@ -10,7 +10,32 @@ const map = new maplibregl.Map({
 map.addControl(new maplibregl.NavigationControl());
 
 map.on('load', async () => {
-    // 1. Terrain/Hillshade laag (Reliëf)
+    // Check welke bron MapTiler gebruikt (meestal 'maptiler' in basic-v2)
+    const styleSources = map.getStyle().sources;
+    const vectorSource = styleSources.maptiler ? 'maptiler' : 'openmaptiles';
+
+    // 1. Wegen als rode lijnen (Toevoegen VÓÓR de punten zodat ze eronder liggen)
+    map.addLayer({
+        id: 'rode-wegen',
+        type: 'line',
+        source: vectorSource,
+        'source-layer': 'road',
+        layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        paint: {
+            'line-color': '#ff0000',
+            'line-width': [
+                'interpolate', ['linear'], ['zoom'],
+                5, 0.5,
+                12, 2.5
+            ],
+            'line-opacity': 0.6
+        }
+    });
+
+    // 2. Terrain/Hillshade (Reliëf)
     map.addSource('terrain-tiles', {
         type: 'raster-dem',
         url: `https://api.maptiler.com/tiles/terrain-rgb-v2/tiles.json?key=${MAPTILER_KEY}`,
@@ -24,7 +49,7 @@ map.on('load', async () => {
         paint: { 'hillshade-shadow-color': '#473b31' }
     });
 
-    // 2. Data inladen en omzetten naar GeoJSON
+    // 3. Data inladen en omzetten naar GeoJSON
     try {
         const response = await fetch('data.json');
         const data = await response.json();
@@ -37,19 +62,13 @@ map.on('load', async () => {
                     type: 'Point',
                     coordinates: [parseFloat(item.lng), parseFloat(item.lat)]
                 },
-                properties: {
-                    lbl: item.lbl,
-                    groep: item.groep
-                }
+                properties: { lbl: item.lbl, groep: item.groep }
             }))
         };
 
-        map.addSource('punten-bron', {
-            type: 'geojson',
-            data: geojson
-        });
+        map.addSource('punten-bron', { type: 'geojson', data: geojson });
 
-        // 3. De Puntenlaag - Gekleurd op basis van jouw specifieke symbolen
+        // 4. De Puntenlaag - Gekleurd op jouw symbolen
         map.addLayer({
             id: 'punten-laag',
             type: 'circle',
@@ -59,18 +78,17 @@ map.on('load', async () => {
                 'circle-stroke-width': 2,
                 'circle-stroke-color': '#ffffff',
                 'circle-color': [
-                    'match',
-                    ['get', 'groep'],
-                    '✈', '#0077b6',  // Vluchten - Blauw
-                    '⌘', '#e63946',  // Bezienswaardigheden - Rood
-                    '🚙', '#f4a261', // Vervoer - Oranje
-                    '⌂', '#2a9d8f',  // Verblijf - Groen
-                    /* default: */ '#8d99ae'
+                    'match', ['get', 'groep'],
+                    '✈', '#0077b6',
+                    '⌘', '#e63946',
+                    '🚙', '#f4a261',
+                    '⌂', '#2a9d8f',
+                    '#8d99ae'
                 ]
             }
         });
 
-        // 4. De Tekstlabels (lbl)
+        // 5. De Tekstlabels (lbl) - Verticale ruimte gehalveerd naar 0.75
         map.addLayer({
             id: 'punten-labels',
             type: 'symbol',
@@ -79,7 +97,6 @@ map.on('load', async () => {
                 'text-field': ['get', 'lbl'],
                 'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
                 'text-size': 11,
-                // Verticale ruimte gehalveerd (van 1.5 naar 0.75)
                 'text-offset': [0, 0.75], 
                 'text-anchor': 'top'
             },
@@ -90,48 +107,12 @@ map.on('load', async () => {
             }
         });
 
-        // 5. Wegen als rode lijnen weergeven
-        map.addLayer({
-            id: 'rode-wegen',
-            type: 'line',
-            source: 'openmaptiles', // De standaard bron-naam in MapTiler stijlen
-            'source-layer': 'road', // De specifieke vector-laag voor wegen
-            layout: {
-                'line-join': 'round',
-                'line-cap': 'round'
-            },
-            paint: {
-                // De kleur van de weg
-                'line-color': '#ff0000', 
-                // De dikte van de weg, afhankelijk van het zoomniveau
-                'line-width': [
-                    'interpolate', ['linear'], ['zoom'],
-                    5, 0.5,  // Op zoom 5 zijn de wegen 0.5px breed
-                    12, 3,   // Op zoom 12 zijn ze 3px breed
-                    18, 15   // Dichtbij zijn ze 15px breed
-                ],
-                'line-opacity': 0.8 // Een beetje transparantie zodat de kaart eronder zichtbaar blijft
-            }
-        }, 'hillshade-layer'); // Optioneel: plaats de laag specifiek onder of boven andere lagen
-
-        // Popup bij klik
-        map.on('click', 'punten-laag', (e) => {
-            const props = e.features[0].properties;
-            new maplibregl.Popup()
-                .setLngLat(e.lngLat)
-                .setHTML(`<strong>${props.groep} ${props.lbl}</strong>`)
-                .addTo(map);
-        });
-
-        map.on('mouseenter', 'punten-laag', () => map.getCanvas().style.cursor = 'pointer');
-        map.on('mouseleave', 'punten-laag', () => map.getCanvas().style.cursor = '');
-
     } catch (err) {
         console.error("Fout bij inladen data.json:", err);
     }
 });
 
-// De toggle voor de heuvels
+// Toggle voor de heuvels
 document.getElementById('terrain-toggle').addEventListener('change', (e) => {
     map.setLayoutProperty('hillshade-layer', 'visibility', e.target.checked ? 'visible' : 'none');
 });
