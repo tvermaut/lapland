@@ -4,8 +4,11 @@ import requests
 
 AIRTABLE_BASE_ID = os.environ.get("AIRTABLE_BASE_ID")
 AIRTABLE_TABLE_NAME = "Lapland"
-AIRTABLE_API_KEY = os.environ.get("AIRTABLE_API_KEY")
+AIRTABLE_API_KEY = os.environ.get("AIRTABLE_TOKEN")
 FILENAME = "data.json"
+
+if not AIRTABLE_BASE_ID:
+raise ValueError("Fout: AIRTABLE_BASE_ID is niet gevonden in de environment variabelen")
 
 url = f"{AIRTABLE_BASE_ID}/{AIRTABLE_TABLE_NAME}"
 headers = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
