@@ -232,6 +232,17 @@
     "lng": 10.394353050588998
   },
   {
+    "id": "receSsNgxCmPwMb62",
+    "lbl": "Helsinki-Vantaa",
+    "groep": "✈",
+    "lat": {
+      "error": "#ERROR!"
+    },
+    "lng": {
+      "error": "#ERROR!"
+    }
+  },
+  {
     "id": "recgPB1gMGTVYWDZy",
     "lbl": "Inari",
     "locatielbl": "68.89869367381495, 27.113652397380637",
@@ -251,7 +262,7 @@
     "id": "rechuKBqTzCNzRabw",
     "lbl": "Umeå",
     "locatielbl": "63.828800343974535, 20.418257038402817",
-    "groep": "⌘",
+    "groep": "✈",
     "lat": 63.828800343974535,
     "lng": 20.418257038402817
   },
@@ -347,7 +358,7 @@
     "id": "recw9b1ML76OigwES",
     "lbl": "Kittilä",
     "locatielbl": "67.64497845762338, 24.995393646289862",
-    "groep": "✈",
+    "groep": "⌘",
     "lat": 67.64497845762338,
     "lng": 24.995393646289862
   },
