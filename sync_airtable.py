@@ -2,7 +2,7 @@ import os
 import json
 import requests
 
-AIRTABLE_BASE_ID = appGVphzDg9yKOfnl
+AIRTABLE_BASE_ID = "appGVphzDg9yKOfnl"
 AIRTABLE_TABLE_NAME = "Lapland"
 AIRTABLE_API_KEY = os.environ.get("AIRTABLE_TOKEN")
 FILENAME = "data.json"
