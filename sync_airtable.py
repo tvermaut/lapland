@@ -10,7 +10,7 @@ FILENAME = "data.json"
 if not AIRTABLE_BASE_ID:
     raise ValueError("Fout: AIRTABLE_BASE_ID is niet gevonden in de environment variabelen")
 
-url = f"{AIRTABLE_BASE_ID}/{AIRTABLE_TABLE_NAME}"
+url = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/{AIRTABLE_TABLE_NAME}"
 headers = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
 
 all_records = []
