@@ -1,1 +1,497 @@
-{}
+[
+  {
+    "id": "recPDCUVmuFRe76rw",
+    "createdTime": "2026-02-27T13:56:36.000Z",
+    "fields": {
+      "lbl": "Å",
+      "locatielbl": "67.88054016497485, 12.982478652073059",
+      "groep": "⌘",
+      "lat": 67.88054016497485,
+      "lng": 12.982478652073059
+    }
+  },
+  {
+    "id": "recZz53Gc31otXDJ2",
+    "createdTime": "2026-02-27T13:23:36.000Z",
+    "fields": {
+      "lbl": "Almere",
+      "locatielbl": "52.35765763551319, 5.147792290832448",
+      "groep": "⌂",
+      "lat": 52.35765763551319,
+      "lng": 5.147792290832448
+    }
+  },
+  {
+    "id": "rec7cYpYHCm8Z5Cvl",
+    "createdTime": "2026-02-27T13:14:06.000Z",
+    "fields": {
+      "lbl": "Arctic Campers",
+      "locatielbl": "69.70264095105185, 18.918175469864295",
+      "groep": "🚙",
+      "lat": 69.70264095105185,
+      "lng": 18.918175469864295
+    }
+  },
+  {
+    "id": "recNDyCjunsvGROKK",
+    "createdTime": "2026-02-27T14:00:09.000Z",
+    "fields": {
+      "lbl": "Arvidsjaur",
+      "locatielbl": "65.59215914529263, 19.18182389414918",
+      "groep": "⌘",
+      "lat": 65.59215914529263,
+      "lng": 19.18182389414918
+    }
+  },
+  {
+    "id": "recV4Ahl9FH1KPOsv",
+    "createdTime": "2026-02-27T13:57:53.000Z",
+    "fields": {
+      "lbl": "Bjerkvik",
+      "locatielbl": "68.54955683479328, 17.557591733403644",
+      "groep": "⌘",
+      "lat": 68.54955683479328,
+      "lng": 17.557591733403644
+    }
+  },
+  {
+    "id": "recUOnRSzbcBNPBuc",
+    "createdTime": "2026-02-27T13:55:59.000Z",
+    "fields": {
+      "lbl": "Bodø",
+      "locatielbl": "67.28065734101904, 14.407025485544287",
+      "groep": "⌘",
+      "lat": 67.28065734101904,
+      "lng": 14.407025485544287
+    }
+  },
+  {
+    "id": "recv9x35R1SxrE7JB",
+    "createdTime": "2026-02-27T13:28:21.000Z",
+    "fields": {
+      "lbl": "Enontekiö",
+      "locatielbl": "68.38406105467766, 23.63545046132743",
+      "groep": "⌘",
+      "lat": 68.38406105467766,
+      "lng": 23.63545046132743
+    }
+  },
+  {
+    "id": "rec8zfsl3vb6UpXIs",
+    "createdTime": "2026-02-27T13:32:36.000Z",
+    "fields": {
+      "lbl": "Evenes",
+      "locatielbl": "68.49521657349909, 16.681390768430006",
+      "groep": "✈",
+      "lat": 68.49521657349909,
+      "lng": 16.681390768430006
+    }
+  },
+  {
+    "id": "recyIH9frx6ymfmQD",
+    "createdTime": "2026-02-27T13:33:37.000Z",
+    "fields": {
+      "lbl": "Gällivare",
+      "locatielbl": "67.13787625118916, 20.658521911996047",
+      "groep": "⌘",
+      "lat": 67.13787625118916,
+      "lng": 20.658521911996047
+    }
+  },
+  {
+    "id": "recrRpJ5jEWdWduwc",
+    "createdTime": "2026-02-27T13:52:45.000Z",
+    "fields": {
+      "lbl": "Hammerfest",
+      "locatielbl": "70.66377361978728, 23.6806672359448",
+      "groep": "⌘",
+      "lat": 70.66377361978728,
+      "lng": 23.6806672359448
+    }
+  },
+  {
+    "id": "reconaYsBblKJvi1F",
+    "createdTime": "2026-02-27T14:03:56.000Z",
+    "fields": {
+      "lbl": "Haparanda",
+      "locatielbl": "65.841882734282, 24.127993006067552",
+      "groep": "⌘",
+      "lat": 65.841882734282,
+      "lng": 24.127993006067552
+    }
+  },
+  {
+    "id": "recgPB1gMGTVYWDZy",
+    "createdTime": "2026-02-27T13:26:58.000Z",
+    "fields": {
+      "lbl": "Inari",
+      "locatielbl": "68.89869367381495, 27.113652397380637",
+      "groep": "⌘",
+      "lat": 68.89869367381495,
+      "lng": 27.113652397380637
+    }
+  },
+  {
+    "id": "rec8K8jfRZHYnvFAI",
+    "createdTime": "2026-02-27T14:13:42.000Z",
+    "fields": {
+      "lbl": "Itäisin piste",
+      "locatielbl": "62.90840128753525, 31.584134966015576",
+      "groep": "⌘",
+      "lat": 62.90840128753525,
+      "lng": 31.584134966015576
+    }
+  },
+  {
+    "id": "recrikwLKoTyysoQe",
+    "createdTime": "2026-02-27T13:34:09.000Z",
+    "fields": {
+      "lbl": "Jokkmokk",
+      "locatielbl": "66.60686228410415, 19.82390649315207",
+      "groep": "⌘",
+      "lat": 66.60686228410415,
+      "lng": 19.82390649315207
+    }
+  },
+  {
+    "id": "recZqfHIZhvXDHc6h",
+    "createdTime": "2026-02-27T13:27:33.000Z",
+    "fields": {
+      "lbl": "Karasjok",
+      "locatielbl": "69.47201053005736, 25.51044301531959",
+      "groep": "⌘",
+      "lat": 69.47201053005736,
+      "lng": 25.51044301531959
+    }
+  },
+  {
+    "id": "recE9FzKkt0yyjm5s",
+    "createdTime": "2026-02-27T13:27:52.000Z",
+    "fields": {
+      "lbl": "Kautokeino",
+      "locatielbl": "69.01802437768335, 23.047395394512435",
+      "groep": "⌘",
+      "lat": 69.01802437768335,
+      "lng": 23.047395394512435
+    }
+  },
+  {
+    "id": "recZ2luO1YcWH2eDh",
+    "createdTime": "2026-02-27T13:29:43.000Z",
+    "fields": {
+      "lbl": "Kilpisjärvi",
+      "locatielbl": "69.04453366560504, 20.804715585640256",
+      "groep": "⌘",
+      "lat": 69.04453366560504,
+      "lng": 20.804715585640256
+    }
+  },
+  {
+    "id": "rec8LyEixD87qC7yq",
+    "createdTime": "2026-02-27T13:36:35.000Z",
+    "fields": {
+      "lbl": "Kirkenes",
+      "locatielbl": "69.72686260758209, 30.044844352128436",
+      "groep": "⌘",
+      "lat": 69.72686260758209,
+      "lng": 30.044844352128436
+    }
+  },
+  {
+    "id": "reclKup2Q8B8Q7vSc",
+    "createdTime": "2026-02-27T13:35:08.000Z",
+    "fields": {
+      "lbl": "Kiruna",
+      "locatielbl": "67.85245739879579, 20.241057963806867",
+      "groep": "⌘",
+      "lat": 67.85245739879579,
+      "lng": 20.241057963806867
+    }
+  },
+  {
+    "id": "recw9b1ML76OigwES",
+    "createdTime": "2026-02-27T13:49:46.000Z",
+    "fields": {
+      "lbl": "Kittilä",
+      "locatielbl": "67.64497845762338, 24.995393646289862",
+      "groep": "✈",
+      "lat": 67.64497845762338,
+      "lng": 24.995393646289862
+    }
+  },
+  {
+    "id": "recA8JRCKtSopmDrM",
+    "createdTime": "2026-02-27T14:02:30.000Z",
+    "fields": {
+      "lbl": "Kolari",
+      "locatielbl": "67.33221343593237, 23.789186347337704",
+      "groep": "⌘",
+      "lat": 67.33221343593237,
+      "lng": 23.789186347337704
+    }
+  },
+  {
+    "id": "recqQsbIXOEPTUaE4",
+    "createdTime": "2026-02-27T14:05:54.000Z",
+    "fields": {
+      "lbl": "Kuusamo",
+      "locatielbl": "65.96430643544315, 29.16524421743492",
+      "groep": "⌘",
+      "lat": 65.96430643544315,
+      "lng": 29.16524421743492
+    }
+  },
+  {
+    "id": "recsy6igSoATQDtse",
+    "createdTime": "2026-02-27T13:52:06.000Z",
+    "fields": {
+      "lbl": "Lakselv",
+      "locatielbl": "70.05121543685169, 24.948161708068305",
+      "groep": "⌘",
+      "lat": 70.05121543685169,
+      "lng": 24.948161708068305
+    }
+  },
+  {
+    "id": "recEQYTahe0YAdroC",
+    "createdTime": "2026-02-27T14:00:46.000Z",
+    "fields": {
+      "lbl": "Luleå",
+      "locatielbl": "65.58479492262043, 22.157316597574635",
+      "groep": "⌘",
+      "lat": 65.58479492262043,
+      "lng": 22.157316597574635
+    }
+  },
+  {
+    "id": "recBCVqtG0HfQrGSj",
+    "createdTime": "2026-02-27T13:36:06.000Z",
+    "fields": {
+      "lbl": "Mehamn",
+      "locatielbl": "71.05441983586783, 27.87937312892356",
+      "groep": "⌘",
+      "lat": 71.05441983586783,
+      "lng": 27.87937312892356
+    }
+  },
+  {
+    "id": "recrt0cWe8qTusogX",
+    "createdTime": "2026-02-27T14:06:38.000Z",
+    "fields": {
+      "lbl": "Mo i Rana",
+      "locatielbl": "66.31367204459241, 14.139833857815296",
+      "groep": "⌘",
+      "lat": 66.31367204459241,
+      "lng": 14.139833857815296
+    }
+  },
+  {
+    "id": "rec6u1dguRk1MKWx6",
+    "createdTime": "2026-02-27T13:29:03.000Z",
+    "fields": {
+      "lbl": "Muonio",
+      "locatielbl": "67.95494762621996, 23.668147050643068",
+      "groep": "⌘",
+      "lat": 67.95494762621996,
+      "lng": 23.668147050643068
+    }
+  },
+  {
+    "id": "rec02sq4d7a9oFSyQ",
+    "createdTime": "2026-02-27T13:35:49.000Z",
+    "fields": {
+      "lbl": "Nordkapp",
+      "locatielbl": "71.19911415888373, 25.786583415333133",
+      "groep": "⌘",
+      "lat": 71.19911415888373,
+      "lng": 25.786583415333133
+    }
+  },
+  {
+    "id": "recvBiWcSAaj6ZxKP",
+    "createdTime": "2026-02-27T13:55:09.000Z",
+    "fields": {
+      "lbl": "Nordkjosbotn",
+      "locatielbl": "69.2154226665015, 19.56959909440457",
+      "groep": "⌘",
+      "lat": 69.2154226665015,
+      "lng": 19.56959909440457
+    }
+  },
+  {
+    "id": "recMYFsgOTooS1BCr",
+    "createdTime": "2026-02-27T13:53:21.000Z",
+    "fields": {
+      "lbl": "Øksfjord",
+      "locatielbl": "70.23972830065856, 22.348161291728587",
+      "groep": "⌘",
+      "lat": 70.23972830065856,
+      "lng": 22.348161291728587
+    }
+  },
+  {
+    "id": "rec1iYSyIMddBnzBM",
+    "createdTime": "2026-02-27T13:22:46.000Z",
+    "fields": {
+      "lbl": "Oslo",
+      "locatielbl": "60.198200648852236, 11.096616913674472",
+      "groep": "✈",
+      "lat": 60.198200648852236,
+      "lng": 11.096616913674472
+    }
+  },
+  {
+    "id": "rec7hwLrJ3FtDm7OS",
+    "createdTime": "2026-02-27T14:04:29.000Z",
+    "fields": {
+      "lbl": "Oulu",
+      "locatielbl": "65.01205242579385, 25.44860040544214",
+      "groep": "⌘",
+      "lat": 65.01205242579385,
+      "lng": 25.44860040544214
+    }
+  },
+  {
+    "id": "recuTOgc0MnjRvozs",
+    "createdTime": "2026-02-27T13:25:01.000Z",
+    "fields": {
+      "lbl": "Rovaniemi",
+      "locatielbl": "66.56232367822432, 25.825563661476973",
+      "groep": "✈",
+      "lat": 66.56232367822432,
+      "lng": 25.825563661476973
+    }
+  },
+  {
+    "id": "rec4VKCV2l02Xqlbg",
+    "createdTime": "2026-02-27T13:24:05.000Z",
+    "fields": {
+      "lbl": "Schiphol",
+      "locatielbl": "52.3131173943091, 4.740163778820314",
+      "groep": "✈",
+      "lat": 52.3131173943091,
+      "lng": 4.740163778820314
+    }
+  },
+  {
+    "id": "recKxhpwgAfbiNN4v",
+    "createdTime": "2026-02-27T13:30:13.000Z",
+    "fields": {
+      "lbl": "Skibotn",
+      "locatielbl": "69.39089379329282, 20.267829205290468",
+      "groep": "⌘",
+      "lat": 69.39089379329282,
+      "lng": 20.267829205290468
+    }
+  },
+  {
+    "id": "recBw1n0qqkXeTB6W",
+    "createdTime": "2026-02-27T13:37:59.000Z",
+    "fields": {
+      "lbl": "Sodankylä",
+      "locatielbl": "67.41626196793156, 26.59060336114027",
+      "groep": "⌘",
+      "lat": 67.41626196793156,
+      "lng": 26.59060336114027
+    }
+  },
+  {
+    "id": "recCBFYX49h4OF2XC",
+    "createdTime": "2026-02-27T13:31:16.000Z",
+    "fields": {
+      "lbl": "Svolvær",
+      "locatielbl": "68.23420891476101, 14.56729096230054",
+      "groep": "⌘",
+      "lat": 68.23420891476101,
+      "lng": 14.56729096230054
+    }
+  },
+  {
+    "id": "recJj9j2XkwR3mQjn",
+    "createdTime": "2026-02-27T15:10:49.000Z",
+    "fields": {
+      "lbl": "Tana Bru",
+      "locatielbl": "70.19924524533064, 28.17635036094875",
+      "groep": "⌘",
+      "lat": 70.19924524533064,
+      "lng": 28.17635036094875
+    }
+  },
+  {
+    "id": "recHr5VSE6yZfD4x4",
+    "createdTime": "2026-02-27T13:14:06.000Z",
+    "fields": {
+      "lbl": "Tromsø",
+      "locatielbl": "69.68348433335595, 18.916860256371056",
+      "groep": "✈",
+      "lat": 69.68348433335595,
+      "lng": 18.916860256371056
+    }
+  },
+  {
+    "id": "recQUwNrEhQoYDDiu",
+    "createdTime": "2026-02-27T13:14:06.000Z",
+    "fields": {
+      "lbl": "Tromsø",
+      "locatielbl": "69.6492188749284, 18.95550431885819",
+      "groep": "⌘",
+      "lat": 69.6492188749284,
+      "lng": 18.95550431885819
+    }
+  },
+  {
+    "id": "recddzollvb4tmrOg",
+    "createdTime": "2026-02-27T14:03:19.000Z",
+    "fields": {
+      "lbl": "Trondheim",
+      "locatielbl": "63.43713051405676, 10.394353050588998",
+      "groep": "⌘",
+      "lat": 63.43713051405676,
+      "lng": 10.394353050588998
+    }
+  },
+  {
+    "id": "recgQauCYyHvuwoAX",
+    "createdTime": "2026-02-27T14:12:27.000Z",
+    "fields": {
+      "lbl": "Tuntsa",
+      "locatielbl": "67.57394924091233, 29.788070080215828",
+      "groep": "⌘",
+      "lat": 67.57394924091233,
+      "lng": 29.788070080215828
+    }
+  },
+  {
+    "id": "rechuKBqTzCNzRabw",
+    "createdTime": "2026-02-27T13:59:15.000Z",
+    "fields": {
+      "lbl": "Umeå",
+      "locatielbl": "63.828800343974535, 20.418257038402817",
+      "groep": "⌘",
+      "lat": 63.828800343974535,
+      "lng": 20.418257038402817
+    }
+  },
+  {
+    "id": "rectBvLMohoudfEHB",
+    "createdTime": "2026-02-27T13:36:32.000Z",
+    "fields": {
+      "lbl": "Vadsø",
+      "locatielbl": "70.07246848778348, 29.743678038547635",
+      "groep": "⌘",
+      "lat": 70.07246848778348,
+      "lng": 29.743678038547635
+    }
+  },
+  {
+    "id": "rec9FzoK1YABCyZpN",
+    "createdTime": "2026-02-27T14:10:29.000Z",
+    "fields": {
+      "lbl": "Vardø",
+      "locatielbl": "70.37066335189682, 31.109912674554334",
+      "groep": "⌘",
+      "lat": 70.37066335189682,
+      "lng": 31.109912674554334
+    }
+  }
+]
