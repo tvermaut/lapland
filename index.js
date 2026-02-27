@@ -3,14 +3,14 @@ const groupColors = {};
 let colorIndex = 0;
 
 const map = new ol.Map({
-target: 'map',
-layers: [
-new ol.layer.Tile({ source: new ol.source.OSM() })
-],
-view: new ol.view.View({
-center: ol.proj.fromLonLat([25.0, 67.0]),
-zoom: 5
-})
+  target: 'map',
+  layers: [
+    new ol.layer.Tile({ source: new ol.source.OSM() })
+  ],
+  view: new ol.View({
+    center: ol.proj.fromLonLat([25.0, 67.0]),
+    zoom: 5
+  })
 });
 
 const vectorSource = new ol.source.Vector();
