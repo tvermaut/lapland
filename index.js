@@ -30,7 +30,7 @@ fetch('data.json')
 .then(response => response.json())
 .then(records => {
 const features = records.map(record => {
-const f = record.fields;
+const f = record;
 if (!f.lat || !f.lng) return null;
 const groep = f.groep || 'Overig';
 if (!groupColors[groep]) {

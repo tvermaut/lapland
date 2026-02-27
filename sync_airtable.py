@@ -1,57 +1,30 @@
-import requests
-import json
 import os
+import json
+import requests
 
-# Configuratie
-BASE_ID = "appGVphzDg9yKOfnl"
-TABLE_NAME = "Punt"
-TOKEN = os.environ.get("AIRTABLE_TOKEN")
+AIRTABLE_BASE_ID = os.environ.get("AIRTABLE_BASE_ID")
+AIRTABLE_TABLE_NAME = "Lapland"
+AIRTABLE_API_KEY = os.environ.get("AIRTABLE_API_KEY")
 FILENAME = "data.json"
 
-def fetch_all_records():
-    url = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
-    headers = {"Authorization": f"Bearer {TOKEN}"}
-    params = {"view": "Github view"}
-    
-    all_records = []
-    offset = None
+url = f"{AIRTABLE_BASE_ID}/{AIRTABLE_TABLE_NAME}"
+headers = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
 
-    while True:
-        if offset:
-            params["offset"] = offset
-        
-        response = requests.get(url, headers=headers, params=params)
-        response.raise_for_status()
-        data = response.json()
-        
-        # We halen alleen de 'fields' en 'id' op om de JSON schoon te houden
-        all_records.extend(data.get("records", []))
-        
-        offset = data.get("offset")
-        if not offset:
-            break
-            
-    return all_records
+all_records = []
+params = {}
 
-if __name__ == "__main__":
-    # 1. Haal de nieuwe data op
-    new_records = fetch_all_records()
-    
-    # 2. Lees de oude data (indien het bestand bestaat)
-    old_records = []
-    if os.path.exists(FILENAME):
-        with open(FILENAME, "r", encoding="utf-8") as f:
-            try:
-                old_records = json.load(f)
-            except json.JSONDecodeError:
-                old_records = []
+while True:
+response = requests.get(url, headers=headers, params=params)
+data = response.json()
 
-    # 3. Vergelijk de data
-    # We vergelijken de inhoud. Als ze gelijk zijn, doen we niets.
-    if json.dumps(new_records, sort_keys=True) == json.dumps(old_records, sort_keys=True):
-        print("Geen wijzigingen gevonden in Airtable. Script stopt.")
-    else:
-        # 4. Schrijf alleen weg bij wijzigingen
-        with open(FILENAME, "w", encoding="utf-8") as f:
-            json.dump(new_records, f, indent=2, ensure_ascii=False)
-        print(f"Wijzigingen gedetecteerd. {len(new_records)} records opgeslagen.")
+with open(FILENAME, "w", encoding="utf-8") as f:
+f.write("[\n")
+for i, record in enumerate(all_records):
+# Maak een JSON string van het object zonder extra spaties
+line = json.dumps(record, ensure_ascii=False)
+# Voeg een komma toe, behalve bij de laatste regel
+comma = "," if i < len(all_records) - 1 else ""
+f.write(f"  {line}{comma}\n")
+f.write("]\n")
+
+print(f"Succesvol {len(all_records)} records opgeslagen in {FILENAME}")
