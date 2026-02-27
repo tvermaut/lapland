@@ -3,11 +3,10 @@ import json
 import requests
 
 AIRTABLE_BASE_ID = "appGVphzDg9yKOfnl"
-AIRTABLE_TABLE_NAME = "Punt"
+AIRTABLE_TABLE_NAME = "Lapland"
 AIRTABLE_API_KEY = os.environ.get("AIRTABLE_TOKEN")
 FILENAME = "data.json"
 
-# Check of de token wel aanwezig is (essentieel voor GitHub Actions)
 if not AIRTABLE_API_KEY:
     raise ValueError("Fout: AIRTABLE_TOKEN is niet gevonden in de environment variabelen.")
 
@@ -17,27 +16,32 @@ headers = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
 all_records = []
 params = {}
 
-print("Data ophalen uit Airtable...")
+print("Data ophalen en platstlaan uit Airtable...")
 
 while True:
     response = requests.get(url, headers=headers, params=params)
     
-    # Check of de aanvraag gelukt is (bijv. 401 Unauthorized of 404 Not Found)
-    response.raise_for_status() 
+    if response.status_code != 200:
+        print(f"Foutmelding van Airtable: {response.text}")
+        response.raise_for_status()
     
     data = response.json()
     records = data.get("records", [])
-    all_records.extend(records)
 
-    # Airtable gebruikt 'offset' voor paginering
+    for record in records:
+        # Hier gebeurt het 'platstlaan': 
+        # We nemen de 'fields' dictionary en voegen de 'id' van het record toe
+        flat_record = {"id": record.get("id")}
+        flat_record.update(record.get("fields", {}))
+        all_records.append(flat_record)
+
     offset = data.get("offset")
     if not offset:
         break
     params["offset"] = offset
 
-# Schrijf de data in één keer weg naar het bestand
+# Schrijf de platgeslagen data weg
 with open(FILENAME, "w", encoding="utf-8") as f:
-    # indent=2 maakt het bestand leesbaar voor mensen
     json.dump(all_records, f, ensure_ascii=False, indent=2)
 
-print(f"Succes! {len(all_records)} records opgeslagen in {FILENAME}")
+print(f"Succes! {len(all_records)} platgeslagen records opgeslagen in {FILENAME}")
