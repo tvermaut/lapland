@@ -1,0 +1,39 @@
+body, html {
+margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
+font-family: sans-serif;
+}
+
+#map {
+height: 100vh;
+width: 100%;
+background-color: #f0f0f0;
+}
+
+#legend {
+position: absolute;
+bottom: 20px;
+right: 20px;
+background: white;
+padding: 10px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+z-index: 100;
+}
+
+.legend-item {
+display: flex;
+align-items: center;
+margin-top: 5px;
+font-size: 14px;
+}
+
+.color-dot {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+margin-right: 8px;
+border: 1px solid #000;
+}
