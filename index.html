@@ -1,14 +1,17 @@
+<!DOCTYPE html>
+
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaart</title>
-<link rel="stylesheet" href="">
+<title>Lapland Kaart Viewer</title>
 <link rel="stylesheet" href="index.css">
+<script src="https://cdn.jsdelivr.net/npm/ol@v10.8.0/dist/ol.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.8.0/ol.css">
 </head>
 <body>
-<div id="map" style="height: 100vh; width: 100%;"></div>
-<div id="legend" style="position: absolute; bottom: 20px; right: 20px; background: white; padding: 10px; z-index: 100;">
+<div id="map"></div>
+<div id="legend">
 <strong>Groepen</strong>
 <div id="legend-items"></div>
 </div>
